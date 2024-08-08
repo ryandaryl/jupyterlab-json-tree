@@ -125,7 +125,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
 const extensions = Object.keys(TYPES).map(k => {
   const { name } = TYPES[k];
   return {
-    id: `jupyterlab-fasta:${name}`,
+    id: `json-expander:${name}`,
     rendererFactory,
     rank: 0,
     dataType: 'string',

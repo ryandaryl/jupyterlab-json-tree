@@ -1,7 +1,7 @@
 {
-    "name": "@jupyterlab/fasta-extension",
+    "name": "json-expander",
     "version": "3.3.0",
-    "description": "Fasta renderer for JupyterLab",
+    "description": "JSON renderer, expands items by key",
     "keywords": [
         "jupyter",
         "jupyterlab",
@@ -13,12 +13,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jupyterlab/jupyter-renderers.git"
+        "url": "https://github.com/ryandaryl/json-expander.git"
     },
     "license": "BSD-3-Clause",
     "author": {
-        "name": "Project Jupyter",
-        "email": "jupyter@googlegroups.com"
+        "name": "ryandaryl",
+        "email": "rdmgpu@gmail.com"
     },
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
@@ -40,7 +40,7 @@
         "build:prod": "jlpm clean && jlpm build:lib:prod && jlpm build:labextension",
         "clean": "jlpm clean:lib",
         "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
-        "clean:labextension": "rimraf jupyterlab_fasta/labextension jupyterlab_fasta/_version.py",
+        "clean:labextension": "rimraf json_expander/labextension json_expander/_version.py",
         "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
         "clean:lintcache": "rimraf .eslintcache .stylelintcache",
         "eslint": "jlpm eslint:check --fix",
@@ -87,7 +87,7 @@
     },
     "jupyterlab": {
         "mimeExtension": true,
-        "outputDir": "jupyterlab_fasta/labextension"
+        "outputDir": "json_expander/labextension"
     },
     "styleModule": "style/index.js"
 }

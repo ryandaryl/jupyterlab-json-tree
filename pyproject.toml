@@ -3,7 +3,7 @@ requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version"]
 build-backend = "hatchling.build"
 
 [project]
-name = "jupyterlab_fasta"
+name = "json_expander"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
@@ -32,24 +32,24 @@ source = "nodejs"
 fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["jupyterlab_fasta/labextension"]
+artifacts = ["json_expander/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"jupyterlab_fasta/labextension" = "share/jupyter/labextensions/@jupyterlab/fasta-extension"
-"install.json" = "share/jupyter/labextensions/@jupyterlab/fasta-extension/install.json"
+"json_expander/labextension" = "share/jupyter/labextensions/json-expander"
+"install.json" = "share/jupyter/labextensions/json-expander/install.json"
 
 [tool.hatch.build.hooks.version]
-path = "jupyterlab_fasta/_version.py"
+path = "json_expander/_version.py"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "jupyterlab_fasta/labextension/static/style.js",
-    "jupyterlab_fasta/labextension/package.json",
+    "json_expander/labextension/static/style.js",
+    "json_expander/labextension/package.json",
 ]
-skip-if-exists = ["jupyterlab_fasta/labextension/static/style.js"]
+skip-if-exists = ["json_expander/labextension/static/style.js"]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
@@ -59,7 +59,7 @@ npm = ["jlpm"]
 build_cmd = "install:extension"
 npm = ["jlpm"]
 source_dir = "src"
-build_dir = "jupyterlab_fasta/labextension"
+build_dir = "json_expander/labextension"
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"

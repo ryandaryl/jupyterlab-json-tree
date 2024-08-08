@@ -1,7 +1,7 @@
 {
-  "name": "@jupyterlab/fasta-extension-ui-tests",
+  "name": "json-expander-ui-tests",
   "version": "1.0.0",
-  "description": "JupyterLab @jupyterlab/fasta-extension Integration Tests",
+  "description": "JupyterLab json-expander Integration Tests",
   "private": true,
   "scripts": {
     "start": "jupyter lab --config jupyter_server_test_config.py",

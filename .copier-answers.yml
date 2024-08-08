@@ -1,19 +1,19 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v4.0.5
+_commit: v0.0.1
 _src_path: https://github.com/jupyterlab/extension-template
-author_email: jupyter@googlegroups.com
-author_name: Project Jupyter
+author_email: rdmgpu@gmail.com
+author_name: ryandaryl
 data_format: string
 file_extension: ''
 has_binder: false
 has_settings: false
 kind: frontend
-labextension_name: '@jupyterlab/fasta-extension'
+labextension_name: 'json-expander'
 mimetype: ''
 mimetype_name: ''
-project_short_description: Fasta renderer for JupyterLab
-python_name: jupyterlab_fasta
-repository: https://github.com/jupyterlab/jupyter-renderers.git
+project_short_description: JSON renderer, expands items by key
+python_name: json_expander
+repository: https://github.com/ryandaryl/json-expander.git
 test: true
 viewer_name: ''
 

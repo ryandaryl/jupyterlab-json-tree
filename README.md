@@ -1,4 +1,4 @@
-# jupyterlab-fasta
+# json-expander
 
 A JupyterLab extension for rendering
 [Fasta](https://en.wikipedia.org/wiki/FASTA_format) data. This extension uses the
@@ -13,7 +13,7 @@ A JupyterLab extension for rendering
 ## Install
 
 ```bash
-pip install jupyterlab-fasta
+pip install json-expander
 ```
 
 ## Usage
@@ -53,7 +53,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the jupyterlab-fasta directory
+# Change directory to the json-expander directory
 # Install package in development mode
 pip install -e .
 # Link your development version of the extension with JupyterLab
@@ -82,5 +82,5 @@ jupyter lab build --minimize=False
 ### Uninstall
 
 ```bash
-pip uninstall jupyterlab-fasta
+pip uninstall json-expander
 ```
