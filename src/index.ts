@@ -30,7 +30,7 @@ export class RenderedData extends Widget implements IRenderMime.IRenderer {
  */
 export const rendererFactory: IRenderMime.IRendererFactory = {
   safe: false,
-  mimeTypes: ['application/vnd.fasta.fasta'],
+  mimeTypes: ['application/json'],
   createRenderer: options => new RenderedData(options)
 };
 
@@ -38,20 +38,12 @@ const extensions = [{
   id: `json-expander:Fasta`,
   rendererFactory,
   rank: 0,
-  dataType: 'string',
-  fileTypes: [
-    {
-      name: "Fasta",
-      extensions: ['.fasta', '.fa'],
-      mimeTypes: ['application/vnd.fasta.fasta'],
-      iconClass: 'jp-MaterialIcon jp-MSAIcon'
-    }
-  ],
+  dataType: 'json',
   documentWidgetFactoryOptions: {
-    name: "Fasta",
-    primaryFileType: "Fasta",
-    fileTypes: ["Fasta"],
-    defaultFor: ["Fasta"]
+    name: 'JSON',
+    primaryFileType: 'json',
+    fileTypes: ['json', 'notebook', 'geojson'],
+    defaultFor: ['json']
   }
 }];
 
