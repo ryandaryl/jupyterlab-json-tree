@@ -49,7 +49,7 @@ ensured-targets = [
     "json_expander/labextension/static/style.js",
     "json_expander/labextension/package.json",
 ]
-skip-if-exists = ["json_expander/labextension/static/style.js"]
+skip-if-exists = []
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
