@@ -58,9 +58,7 @@
         "watch:src": "tsc -w"
     },
     "dependencies": {
-        "@jlab-contrib/msa": "^1.1.2",
         "@jupyterlab/rendermime-interfaces": "^3.0.0 || ^3.8.0",
-        "@lumino/messaging": "^1.0.0 || ^2.0.0",
         "@lumino/widgets": "^1.0.0 || ^2.1.0"
     },
     "devDependencies": {
