@@ -50,20 +50,7 @@ export class RenderedData extends Widget implements IRenderMime.IRenderer {
     var kwargs = model.metadata["application/json"] as Object as IPythonJsonArgs
     delete kwargs["root"];
     delete kwargs["expanded"];
-    [
-      "getItemString",
-      "labelRenderer",
-      "valueRenderer",
-      "shouldExpandNodeInitially",
-      "postprocessValue",
-      "isCustomNode",
-      "sortObjectKeys",
-    ].forEach((k) => {
-        if (k in kwargs) {
-          kwargs[k] = eval(String(kwargs[k]))
-        }
-      }
-    )
+    for (const [key, value] of Object.entries(kwargs)) kwargs[key] = eval(String(value))
     if (this._rootDOM === null) {
       this._rootDOM = createRoot(this.node);
     }
