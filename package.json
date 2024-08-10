@@ -59,11 +59,16 @@
     },
     "dependencies": {
         "@jupyterlab/rendermime-interfaces": "^3.0.0 || ^3.8.0",
-        "@lumino/widgets": "^1.0.0 || ^2.1.0"
+        "@lumino/widgets": "^1.0.0 || ^2.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-json-tree": "^0.18.0"
     },
     "devDependencies": {
         "@jupyterlab/builder": "^4.0.0",
         "@types/json-schema": "^7.0.11",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
         "@typescript-eslint/eslint-plugin": "^5.55.0",
         "@typescript-eslint/parser": "^5.55.0",
         "css-loader": "^6.7.1",
