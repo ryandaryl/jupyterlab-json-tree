@@ -4,6 +4,29 @@ import * as React from 'react';
 import { createRoot, Root } from 'react-dom/client';
 import { JSONTree } from 'react-json-tree';
 
+// Provide an invalid theme object (this is on purpose!) to invalidate the
+// react-json-tree's inline styles that override CodeMirror CSS classes
+const theme = {
+  scheme: 'jupyter',
+  base00: 'invalid',
+  base01: 'invalid',
+  base02: 'invalid',
+  base03: 'invalid',
+  base04: 'invalid',
+  base05: 'invalid',
+  base06: 'invalid',
+  base07: 'invalid',
+  base08: 'invalid',
+  base09: 'invalid',
+  base0A: 'invalid',
+  base0B: 'invalid',
+  base0C: 'invalid',
+  base0D: 'invalid',
+  base0E: 'invalid',
+  base0F: 'invalid',
+  author: 'invalid'
+};
+
 /**
  * A widget for rendering data, for usage with rendermime.
  */
@@ -46,7 +69,7 @@ export class RenderedData extends Widget implements IRenderMime.IRenderer {
     }
     return new Promise<void>((resolve, reject) => {
       this._rootDOM!.render(
-        <JSONTree data={model.data["application/json"]} {...kwargs} />
+        <JSONTree data={model.data["application/json"]} theme={{extend: theme}} {...kwargs} />
       );
     });
   }
