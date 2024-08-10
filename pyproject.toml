@@ -3,7 +3,7 @@ requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version"]
 build-backend = "hatchling.build"
 
 [project]
-name = "json_expander"
+name = "jupyterlab_json_tree"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
@@ -32,22 +32,22 @@ source = "nodejs"
 fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["json_expander/labextension"]
+artifacts = ["jupyterlab_json_tree/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"json_expander/labextension" = "share/jupyter/labextensions/json-expander"
-"install.json" = "share/jupyter/labextensions/json-expander/install.json"
+"jupyterlab_json_tree/labextension" = "share/jupyter/labextensions/json-tree"
+"install.json" = "share/jupyter/labextensions/json-tree/install.json"
 
 [tool.hatch.build.hooks.version]
-path = "json_expander/_version.py"
+path = "jupyterlab_json_tree/_version.py"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "json_expander/labextension/static/style.js",
-    "json_expander/labextension/package.json",
+    "jupyterlab_json_tree/labextension/static/style.js",
+    "jupyterlab_json_tree/labextension/package.json",
 ]
 skip-if-exists = []
 
@@ -59,7 +59,7 @@ npm = ["jlpm"]
 build_cmd = "install:extension"
 npm = ["jlpm"]
 source_dir = "src"
-build_dir = "json_expander/labextension"
+build_dir = "jupyterlab_json_tree/labextension"
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"

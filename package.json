@@ -1,5 +1,5 @@
 {
-    "name": "json-expander",
+    "name": "json-tree",
     "version": "3.3.0",
     "description": "JSON renderer, expands items by key",
     "keywords": [
@@ -13,7 +13,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ryandaryl/json-expander.git"
+        "url": "https://github.com/ryandaryl/json-tree.git"
     },
     "license": "BSD-3-Clause",
     "author": {
@@ -40,7 +40,7 @@
         "build:prod": "jlpm clean && jlpm build:lib:prod && jlpm build:labextension",
         "clean": "jlpm clean:lib",
         "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
-        "clean:labextension": "rimraf json_expander/labextension json_expander/_version.py",
+        "clean:labextension": "rimraf jupyterlab_json_tree/labextension jupyterlab_json_tree/_version.py",
         "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
         "clean:lintcache": "rimraf .eslintcache .stylelintcache",
         "eslint": "jlpm eslint:check --fix",
@@ -90,7 +90,7 @@
     },
     "jupyterlab": {
         "mimeExtension": true,
-        "outputDir": "json_expander/labextension"
+        "outputDir": "jupyterlab_json_tree/labextension"
     },
     "styleModule": "style/index.js"
 }

@@ -74,7 +74,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
 };
 
 const extensions = [{
-  id: `json-expander:Fasta`,
+  id: `json-tree:Fasta`,
   rendererFactory,
   rank: 0,
   dataType: 'json',

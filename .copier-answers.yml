@@ -8,12 +8,12 @@ file_extension: ''
 has_binder: false
 has_settings: false
 kind: frontend
-labextension_name: 'json-expander'
+labextension_name: 'json-tree'
 mimetype: ''
 mimetype_name: ''
 project_short_description: JSON renderer, expands items by key
-python_name: json_expander
-repository: https://github.com/ryandaryl/json-expander.git
+python_name: jupyterlab_json_tree
+repository: https://github.com/ryandaryl/json-tree.git
 test: true
 viewer_name: ''
 
