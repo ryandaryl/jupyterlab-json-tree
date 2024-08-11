@@ -1,10 +1,6 @@
 # json-tree
 
-A JupyterLab extension for rendering
-[Fasta](https://en.wikipedia.org/wiki/FASTA_format) data. This extension uses the
-[MSA Fasta viewer](http://msa.biojs.net/).
-
-![demo](http://g.recordit.co/temizjae9X.gif)
+A JupyterLab extension for rendering JSON using [react-json-tree](https://www.npmjs.com/package/react-json-tree)
 
 ## Requirements
 
